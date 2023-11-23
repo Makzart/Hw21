@@ -1,0 +1,219 @@
+/*fonts*/
+$poppins-font-path: '../../assets/fonts';
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('#{$poppins-font-path}/Poppins-Regular.eot');
+  src: local('Poppins Regular'), local('Poppins-Regular'),
+  url('#{$poppins-font-path}/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$poppins-font-path}/Poppins-Regular.woff2') format('woff2'),
+  url('#{$poppins-font-path}/Poppins-Regular.woff') format('woff'),
+  url('#{$poppins-font-path}/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('#{$poppins-font-path}/Poppins-Light.eot');
+  src: local('Poppins Light'), local('Poppins-Light'),
+  url('#{$poppins-font-path}/Poppins-Light.eot?#iefix') format('embedded-opentype'),
+  url('#{$poppins-font-path}/Poppins-Light.woff2') format('woff2'),
+  url('#{$poppins-font-path}/Poppins-Light.woff') format('woff'),
+  url('#{$poppins-font-path}/Poppins-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('#{$poppins-font-path}/Poppins-SemiBold.eot');
+  src: local('Poppins SemiBold'), local('Poppins-SemiBold'),
+  url('#{$poppins-font-path}/Poppins-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('#{$poppins-font-path}/Poppins-SemiBold.woff2') format('woff2'),
+  url('#{$poppins-font-path}/Poppins-SemiBold.woff') format('woff'),
+  url('#{$poppins-font-path}/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('#{$poppins-font-path}/Poppins-Medium.eot');
+  src: local('Poppins Medium'), local('Poppins-Medium'),
+  url('#{$poppins-font-path}/Poppins-Medium.eot?#iefix') format('embedded-opentype'),
+  url('#{$poppins-font-path}/Poppins-Medium.woff2') format('woff2'),
+  url('#{$poppins-font-path}/Poppins-Medium.woff') format('woff'),
+  url('#{$poppins-font-path}/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*variables*/
+$font-stack: Poppins, sans-serif;
+$font-light: Poppins-Light, sans-serif;
+$primary-color: black;
+$main-background-path: '../../assets/pictures/background.png';
+$white-color: white;
+$color-blue: #2EACF3;
+
+
+%container-default {
+  max-width: 1305px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+%bg-default {
+  background-size: cover;
+  background-position:center center;
+  background-repeat: no-repeat;
+  height: 800px;
+}
+
+%button {
+  color: $white-color;
+  background-color: $color-blue;
+  display: inline-block;
+  font-family: $font-stack;
+  font-weight: 400;
+}
+
+@mixin theme($img) {
+  background-image: url($img);
+  @extend %bg-default;
+}
+
+/*general styles*/
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+.container {
+  @extend %container-default;
+}
+
+/*personal styles*/
+
+.header__main {
+  @include theme($main-background-path);
+}
+
+.main__menu{
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0 0 0;
+
+  .main__menu-list{
+    display: flex;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .menu-list{
+    display: flex;
+    gap: 60px;
+
+      a{
+        font-family: $font-light;
+        color: $white-color;
+        font-size: 16px;
+        font-weight: 300;
+      }
+  }
+}
+
+.button{
+  @extend %button;
+}
+
+.main__menu-list .button{
+  padding: 5px 17px 6px 21px;
+  border-radius: 6px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-container label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-container label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $white-color;
+  background-color: transparent;
+  border-radius: 2px;
+}
+
+.checkbox-container label::after {
+  content: "\2713";
+  position: absolute;
+  left: 6px;
+  top: 9px;
+  font-size: 11px;
+  color: $white-color;
+  opacity: 0;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.checkbox-container input:checked + label::after {
+  opacity: 1;
+}
+
+h1 {
+  color: $white-color;
+  font-size: 70px;
+  font-weight: 500;
+  line-height: 120%;
+  width: 661px;
+}
+
+.label {
+  color: $white-color;
+  font-size: 14px;
+  font-weight: 300;
+  width: 388px;
+}
+
+.checkbox-container a{
+  color: $color-blue;
+}
+
+.header__test-title{
+  margin-top: 131px;
+  display: flex;
+  flex-direction: column;
+  gap: 81px;
+}
+
+.take-test{
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+
+.take-test .button{
+  padding: 11px 61px 14px 55px;
+  border-radius: 5px 27.5px;;
+}

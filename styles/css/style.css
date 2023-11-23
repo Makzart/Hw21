@@ -1,0 +1,175 @@
+@charset "UTF-8";
+/*fonts*/
+@font-face {
+  font-family: "Poppins";
+  src: url("../../assets/fonts/Poppins-Regular.eot");
+  src: local("Poppins Regular"), local("Poppins-Regular"), url("../../assets/fonts/Poppins-Regular.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Poppins-Regular.woff2") format("woff2"), url("../../assets/fonts/Poppins-Regular.woff") format("woff"), url("../../assets/fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../assets/fonts/Poppins-Light.eot");
+  src: local("Poppins Light"), local("Poppins-Light"), url("../../assets/fonts/Poppins-Light.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Poppins-Light.woff2") format("woff2"), url("../../assets/fonts/Poppins-Light.woff") format("woff"), url("../../assets/fonts/Poppins-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../assets/fonts/Poppins-SemiBold.eot");
+  src: local("Poppins SemiBold"), local("Poppins-SemiBold"), url("../../assets/fonts/Poppins-SemiBold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Poppins-SemiBold.woff2") format("woff2"), url("../../assets/fonts/Poppins-SemiBold.woff") format("woff"), url("../../assets/fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../assets/fonts/Poppins-Medium.eot");
+  src: local("Poppins Medium"), local("Poppins-Medium"), url("../../assets/fonts/Poppins-Medium.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Poppins-Medium.woff2") format("woff2"), url("../../assets/fonts/Poppins-Medium.woff") format("woff"), url("../../assets/fonts/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+/*variables*/
+.container {
+  max-width: 1305px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header__main {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 800px;
+}
+
+.button {
+  color: white;
+  background-color: #2EACF3;
+  display: inline-block;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+}
+
+/*general styles*/
+body {
+  font: 100% Poppins, sans-serif;
+  color: black;
+}
+
+/*personal styles*/
+.header__main {
+  background-image: url("../../assets/pictures/background.png");
+}
+
+.main__menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0 0 0;
+}
+.main__menu .main__menu-list {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+.main__menu .menu-list {
+  display: flex;
+  gap: 60px;
+}
+.main__menu .menu-list a {
+  font-family: Poppins-Light, sans-serif;
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.main__menu-list .button {
+  padding: 5px 17px 6px 21px;
+  border-radius: 6px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.checkbox-container label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-container label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: 2px;
+}
+
+.checkbox-container label::after {
+  content: "✓";
+  position: absolute;
+  left: 6px;
+  top: 9px;
+  font-size: 11px;
+  color: white;
+  opacity: 0;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.checkbox-container input:checked + label::after {
+  opacity: 1;
+}
+
+h1 {
+  color: white;
+  font-size: 70px;
+  font-weight: 500;
+  line-height: 120%;
+  width: 661px;
+}
+
+.label {
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+  width: 388px;
+}
+
+.checkbox-container a {
+  color: #2EACF3;
+}
+
+.header__test-title {
+  margin-top: 131px;
+  display: flex;
+  flex-direction: column;
+  gap: 81px;
+}
+
+.take-test {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+
+.take-test .button {
+  padding: 11px 61px 14px 55px;
+  border-radius: 5px 27.5px;
+}
+
+/*# sourceMappingURL=style.css.map */

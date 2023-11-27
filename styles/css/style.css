@@ -290,7 +290,7 @@ header {
   gap: 38px;
 }
 .info__diagram {
-  background-image: url("../../../../assets/pictures/diagram.png");
+  background-image: url("../../assets/pictures/diagram.png");
   width: 460px;
   height: 366px;
 }

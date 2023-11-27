@@ -1,0 +1,4 @@
+@mixin theme($img) {
+  background-image: url($img);
+  @extend %bg-default;
+}

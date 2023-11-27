@@ -1,0 +1,52 @@
+@import "variables";
+@font-face {
+  font-family: 'Poppins';
+  src: url('#{$poppins-font-path}/Poppins-Regular.eot');
+  src: local('Poppins Regular'), local('Poppins-Regular'),
+  url('#{$poppins-font-path}/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$poppins-font-path}/Poppins-Regular.woff2') format('woff2'),
+  url('#{$poppins-font-path}/Poppins-Regular.woff') format('woff'),
+  url('#{$poppins-font-path}/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('#{$poppins-font-path}/Poppins-Light.eot');
+  src: local('Poppins Light'), local('Poppins-Light'),
+  url('#{$poppins-font-path}/Poppins-Light.eot?#iefix') format('embedded-opentype'),
+  url('#{$poppins-font-path}/Poppins-Light.woff2') format('woff2'),
+  url('#{$poppins-font-path}/Poppins-Light.woff') format('woff'),
+  url('#{$poppins-font-path}/Poppins-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('#{$poppins-font-path}/Poppins-SemiBold.eot');
+  src: local('Poppins SemiBold'), local('Poppins-SemiBold'),
+  url('#{$poppins-font-path}/Poppins-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('#{$poppins-font-path}/Poppins-SemiBold.woff2') format('woff2'),
+  url('#{$poppins-font-path}/Poppins-SemiBold.woff') format('woff'),
+  url('#{$poppins-font-path}/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('#{$poppins-font-path}/Poppins-Medium.eot');
+  src: local('Poppins Medium'), local('Poppins-Medium'),
+  url('#{$poppins-font-path}/Poppins-Medium.eot?#iefix') format('embedded-opentype'),
+  url('#{$poppins-font-path}/Poppins-Medium.woff2') format('woff2'),
+  url('#{$poppins-font-path}/Poppins-Medium.woff') format('woff'),
+  url('#{$poppins-font-path}/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

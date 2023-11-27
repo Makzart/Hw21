@@ -1,0 +1,14 @@
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+.container {
+  @extend %container-default;
+}
+
+/*personal styles*/
+
+.header__main {
+  @include theme($main-background-path);
+}

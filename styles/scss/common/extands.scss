@@ -1,0 +1,20 @@
+%container-default {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+%bg-default {
+  background-size: cover;
+  background-position:center center;
+  background-repeat: no-repeat;
+  height: 800px;
+}
+
+%button {
+  color: $white-color;
+  background-color: $color-blue;
+  display: inline-block;
+  font-family: $font-stack;
+  font-weight: 400;
+}

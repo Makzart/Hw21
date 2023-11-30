@@ -1,14 +1,21 @@
 body {
   font: 100% $font-stack;
   color: $primary-color;
+  position: relative;
 }
 
 .container {
   @extend %container-default;
 }
 
-/*personal styles*/
+.d-flex {
+  display: flex;
+}
 
-.header__main {
-  @include theme($main-background-path);
+.justify-content-center {
+  justify-content: center;
+}
+
+.flex-column {
+  flex-direction: column;
 }
